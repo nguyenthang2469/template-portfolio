@@ -1,0 +1,36 @@
+/* Mobile & Tablet */
+
+@media (max-width: 63.9375rem) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .sidebar {
+        display: none;
+    }
+    .container {
+        margin-left: 0;
+    }
+    .navbar {
+        display: flex;
+    }
+    .sidebar.open-sidebar {
+        display: block;
+    }
+}
+
+
+/* Talet */
+
+@media (min-width: 46.25rem) and (max-width: 63.9375rem) {}
+
+
+/* Mobile */
+
+@media (max-width: 46.1875rem) {
+    .content-subavatar {
+        flex-direction: column;
+    }
+    .subavatar-item {
+        width: 100%;
+    }
+}
