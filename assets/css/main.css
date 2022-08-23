@@ -139,12 +139,19 @@
     display: none;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    z-index: 1;
+    background-color: #fff;
+    visibility: visible;
 }
 
 .navbar-menu {
     padding: 16px;
     line-height: 0;
-    transform: translateY(-19px);
     cursor: pointer;
     z-index: 1;
     animation: fadeOut ease-in-out 0.3s forwards;
@@ -152,10 +159,7 @@
 
 @keyframes fadeOut {
     from {
-        transform: translate(calc(300px - 62px), -19px);
-    }
-    to {
-        transform: translateY(-19px);
+        transform: translateX(calc(300px - 62px));
     }
 }
 
@@ -181,11 +185,8 @@
 }
 
 @keyframes fadeIn {
-    from {
-        transform: translateY(-19px);
-    }
     to {
-        transform: translate(calc(300px - 62px), -19px);
+        transform: translateX(calc(300px - 62px));
     }
 }
 
@@ -205,7 +206,7 @@
     margin: 16px;
     border-radius: 50%;
     overflow: hidden;
-    width: 65px;
+    width: 45px;
 }
 
 .navbar-profile__img {

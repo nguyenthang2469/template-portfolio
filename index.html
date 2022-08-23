@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://dthezntil550i.cloudfront.net/86/latest/861911302007288750002221253/1280_960/6d5f31fb-62f2-4c12-bbda-e22d08b4ea2a.png" type="image/x-icon">
     <title>My portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
@@ -65,17 +66,17 @@
             </ul>
         </div>
 
-        <div class="container">
-            <div class="navbar">
-                <div class="navbar-menu">
-                    <span class="navbar-menu__icon"></span>
-                    <span class="navbar-menu__icon"></span>
-                    <span class="navbar-menu__icon"></span>
-                </div>
-                <div class="navbar-profile">
-                    <a href=""><img src="./assets/img/avatar.jpg" alt="" class="navbar-profile__img"></a>
-                </div>
+        <div class="navbar">
+            <div class="navbar-menu">
+                <span class="navbar-menu__icon"></span>
+                <span class="navbar-menu__icon"></span>
+                <span class="navbar-menu__icon"></span>
             </div>
+            <div class="navbar-profile">
+                <a href=""><img src="./assets/img/avatar.jpg" alt="" class="navbar-profile__img"></a>
+            </div>
+        </div>
+        <div class="container">
             <header id="portfolio" class="header">
                 <h1 class="header__heading">My Portfolio</h1>
                 <div class="header-filter">
@@ -359,9 +360,11 @@
 
     <script>
         var $ = (value) => document.querySelector(value);
+        var $$ = (value) => document.querySelectorAll(value);
         var sidebar = $('.sidebar');
         var navbarMenu = $('.navbar-menu');
         var sidebarModal = $('.sidebar-wrapper');
+        var sidebarItemLinks = $$('.sidebar-item__link');
 
         function handleSidebar() {
             var isOpenSidebar = sidebar.classList.contains('open-sidebar');
@@ -377,8 +380,11 @@
         }
 
         navbarMenu.addEventListener('click', handleSidebar);
-
         sidebarModal.addEventListener('click', handleSidebar);
+        sidebarItemLinks.forEach(function(item) {
+            item.addEventListener('click', handleSidebar);
+        })
+        sidebarItemLinks.addEventListener('click', () => {});
     </script>
 </body>
 

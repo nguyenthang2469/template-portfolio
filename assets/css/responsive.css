@@ -9,6 +9,10 @@
     }
     .container {
         margin-left: 0;
+        /* margin-top: var(--navbar-height); */
+    }
+    .header {
+        margin-top: calc(var(--navbar-height) + 16px);
     }
     .navbar {
         display: flex;
